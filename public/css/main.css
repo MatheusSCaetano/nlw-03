@@ -1,0 +1,29 @@
+/*comentario
+# - procure o elemento com o id tal*/
+/**/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{/*o padrão to tamanho do navegador é de 16px - 100% */
+    font-size: 62.5%;/*equivale a 10px*/
+    /* sempre usar 10px no font-size */
+}
+body{
+     height: 100vh;
+     color:white;
+     background: #EBF2F5 ;
+    }
+
+body, input, button, textarea{
+    /*font-weight: 400;*/
+     /*font-size: 18px;*/
+     /*line-height: 1;*/
+     /*font-family: 'Nunito', sans-serif; isso tudo é a mesma coisa que a linha de baixo*/
+     font: 400 1.8rem/1 "Nunito", sans-serif;/*rem vai até a tag pai, no caso html, e faz a conta para calcular o tamanho no caso ele pega os 10px que esta no root*/
+}
+
+

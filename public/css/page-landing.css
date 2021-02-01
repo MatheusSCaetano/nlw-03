@@ -1,0 +1,109 @@
+#page-landing {
+  background: linear-gradient(329.54deg, #29b6d1 0%, #00c7c7 100%);
+  text-align: center;
+  min-height: 100vh;
+
+  display: flex; /* para conseguir usar o magin auto dentro do #container* e conseguir readequar os componentes no top e em baixo*/
+}
+
+#container {
+  margin: auto; /*alinhamentos dos elementos no centro - margens e cabeçalhos  margin: top right bottom e left exemplo margin: 50px 10px 10px 50px*/
+  width: min(90%,112rem); /*colocar mais largura dos lados dentro do container*/
+}
+
+.location,
+h1,
+.visit p {
+  height: 16vh; /*Separção dos elementos de dentro do location, no h1 e dentro do visit que tenha a tag p*/
+}
+
+.visit a:hover {
+  /*mouse em cima dele*/
+  background: #96feff; /*mudo a cor do botão*/
+}
+
+.visit a {
+    width: 8rem; /*largura do botão*/
+    height: 8rem; /*altura do botão*/
+    background: #ffd666; /*cor do botão*/
+  
+    border: none; /*sem bordas*/
+    border-radius: 3rem; /*arredondamento da borda*/
+  
+    display: flex;
+    align-items: center; /*vai colocar os elementos  dentro dele e coloca-los de cima pra baixo no centro*/
+    justify-content: center; /*vai colocar os elementos  dentro dele e coloca-los de um lado para o outrp no centro*/
+  
+    margin: auto;
+    
+    transition: background 200ms; /*dar uma atrasada na transição do evento hover*/
+    animation-delay: 250ms;
+  }
+#logo {
+  animation-delay: 50ms;
+}
+
+.location {
+  animation-delay: 100ms;
+}
+
+main h1 {
+  animation-delay: 150ms;
+  font-size: clamp(4rem, 8vw, 8.4rem);
+  /* minimo que posso chegar, qunt que eu quero, maximo! tamanho da fonte para ir dimensionando */
+}
+
+.visit p {
+  animation-delay: 200ms;
+}
+
+/*desktop version*/
+/* quando a largura for mais de 760 o meta view port do arquivo index indentifica e aplica as regras de CSS abaixo! */
+@media (min-width: 760px) {
+  #container {
+    padding: 5rem 2rem;
+    background: url("../images/bg.svg") no-repeat 80% /
+      clamp(30rem, 54vw, 56rem);
+  }
+
+  header {
+    display: flex;
+    align-items: center; /*disponivel apenas quando temos o display flex ou grid*/
+    justify-content: space-between; /*disponivel apenas quando temos o display flex ou grid - colca um em cada canto*/
+  }
+
+  .location,
+  h1,
+  .visit p {
+    height: initial; /*para não ter mais a separação e ficar um do lado do outro com o auxilio do display flex!*/
+    text-align: initial;
+  }
+
+  .location {
+    text-align: right;
+    font-size: 2.4rem;
+    line-height: 1.5;
+  }
+
+  main h1 {
+    font-weight: bold;
+    line-height: 0.88;
+    margin: clamp(10%, 9vh, 12%) 0 4rem;
+    width: min(300px, 80%);
+  }
+
+  .visit {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .visit p {
+    font-size: 2.4rem;
+    line-height: 1.5;
+    width: clamp(20rem, 20vw, 30rem);
+  }
+
+  .visit a {
+    margin: initial; /*alinhamentos dos elementos no centro - margens e cabeçalhos*/
+  }
+}
